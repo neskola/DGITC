@@ -1,0 +1,5 @@
+Material My Material : Common/MatDefs/Misc/ColoredTextured.j3md {
+     MaterialParameters {
+        m_ColorMap : Textures/goswall1.jpg
+     }
+}
