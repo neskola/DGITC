@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+          "-//Hibernate/Hibernate Mapping DTD 2.0//EN"
+          "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+
+<hibernate-mapping>
+	<class name="fi.game.data.schemas.Entity" table="ENTITIES">
+
+		<id name="entityId" column="eid" unsaved-value="null">
+			<generator class="increment" />
+		</id>
+
+		<property name="name" column="NAME" not-null="true" unique="true" />
+		<property name="textureId" column="TEXTURE_ID" />
+		<property name="type" column="TYPE" />
+		<property name="xPos" column="X_POS" />
+		<property name="yPos" column="Y_POS" />
+		<property name="zPos" column="Z_POS" />
+		<property name="xSize" column="X_SIZE" />
+		<property name="ySize" column="Y_SIZE" />
+		<property name="zSize" column="Z_SIZE" />
+	</class>
+
+	<class name="fi.game.data.schemas.Texture" table="TEXTURES">
+
+		<id name="textureId" column="tid" unsaved-value="null">
+			<generator class="increment" />
+		</id>
+
+		<property name="name" column="NAME" not-null="true" unique="true" />
+		<property name="fileName" column="FILENAME" not-null="true" />
+	</class>
+
+</hibernate-mapping> 
